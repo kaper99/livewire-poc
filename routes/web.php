@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/teams', function () {
+    return view('livewire.teams');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

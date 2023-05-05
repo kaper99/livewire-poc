@@ -22,10 +22,18 @@ class TeamFactory extends Factory
      */
     public function definition(): array
     {
+        $regions = [
+            'Mazowieckie',
+            'Świętokrzyskie',
+            'Opolskie',
+            'Podkarpackie'
+        ];
         return [
             'name' => $this->faker->unique()->company(),
             'user_id' => User::factory(),
             'personal_team' => true,
+            'region' => $regions[rand(0, 3)],
+            'city' => $this->faker->city
         ];
     }
 }
