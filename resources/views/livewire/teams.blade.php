@@ -18,7 +18,7 @@
         @vite('resources/css/app.css')
     </head>
     <body>
-
+    @livewire('navigation-menu')
     <livewire:show-teams />
 
     <livewire:scripts />
