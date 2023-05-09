@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -34,7 +35,6 @@ public $photo;
         $user = Auth::user();
 
         if ($team->hasUserWithEmail($user->email)) {
-
             $message = 'User juz dodany do tej grupy';
             session()->flash('message', $message);
             return;

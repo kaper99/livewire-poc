@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\TeamDetailsComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,8 @@ Route::get('/', function () {
 Route::get('/teams', function () {
     return view('livewire.teams');
 });
+
+Route::get('/team/{team}', TeamDetailsComponent::class);
 
 Route::middleware([
     'auth:sanctum',
